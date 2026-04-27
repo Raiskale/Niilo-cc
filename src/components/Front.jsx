@@ -13,7 +13,7 @@ import Beams from './Beams'
 import FadeContent from './FadeContent'
 import LogoLoop from './LogoLoop'
 import memojiThumb from '../assets/image0.png'
-import pdfLinkki from '../assets/Niilo Räisänen.pdf'
+import pdfLinkki from '../assets/Lisää tietoa Niilo Räisänen.pdf'
 
 function Front() {
   const teknologiat = [
