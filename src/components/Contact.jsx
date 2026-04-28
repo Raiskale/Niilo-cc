@@ -1,16 +1,19 @@
 import { useState } from 'react'
 import FadeContent from './FadeContent'
-
+// lähetetään tänne lomakkeentiedot
 const formspreeLinkki = 'https://formspree.io/f/xwvaoeoe'
 
 function Contact() {
+  // tallentaa kenttien arvot
   const [lomakeTiedot, setLomakeTiedot] = useState({
     name: '',
     email: '',
     subject: '',
     message: '',
   })
+
   const [lomakkeenTila, setLomakkeenTila] = useState('idle')
+  // teksti käyttäjälle lähetyksen jälkeen
   const [palaute, setPalaute] = useState('')
 
   const vaihdaKentta = (event) => {
@@ -20,13 +23,14 @@ function Contact() {
       [name]: value,
     }))
   }
-
+// lähettää tiedot formspreehen
   const lahetaLomake = async (event) => {
     event.preventDefault()
     setLomakkeenTila('loading')
     setPalaute('')
 
     try {
+      // lähettää tiedot json muodossa
       const vastaus = await fetch(formspreeLinkki, {
         method: 'POST',
         headers: {
@@ -44,7 +48,7 @@ function Contact() {
       if (!vastaus.ok) {
         throw new Error('Lähetys epäonnistui.')
       }
-
+// jos onnistuu nii näyttää palautteen
       setLomakkeenTila('success')
       setPalaute('Viesti lähetettiin onnistuneesti.')
       setLomakeTiedot({
@@ -54,6 +58,7 @@ function Contact() {
         message: '',
       })
     } catch {
+      // errorviesti jos tulee virhe
       setLomakkeenTila('error')
       setPalaute('Viestin lähetys ei onnistunut. Kokeile uudelleen.')
     }
@@ -64,6 +69,7 @@ function Contact() {
       id="contact"
       className="relative overflow-hidden bg-black px-6 py-24 text-white md:px-8 md:py-28"
     >
+      
       <div className="absolute inset-0 bg-[linear-gradient(180deg,#000000_0%,#000000_48%,#020611_68%,#071327_84%,#0d2145_100%)]" />
       <div className="absolute inset-x-0 bottom-0 h-[22rem] bg-[radial-gradient(ellipse_at_bottom,rgba(59,130,246,0.22),rgba(59,130,246,0.12)_32%,rgba(59,130,246,0.04)_48%,transparent_74%)]" />
       <div className="absolute inset-0 opacity-[0.035] bg-[radial-gradient(rgba(255,255,255,0.9)_0.6px,transparent_0.8px)] [background-size:10px_10px]" />

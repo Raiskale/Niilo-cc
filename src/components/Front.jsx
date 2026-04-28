@@ -16,6 +16,7 @@ import memojiThumb from '../assets/image0.png'
 import pdfLinkki from '../assets/Lisää tietoa Niilo Räisänen.pdf'
 
 function Front() {
+  // lista logolooppiin
   const teknologiat = [
     {
       node: <SiHtml5 />,
@@ -45,6 +46,7 @@ function Front() {
     <section className="relative min-h-screen overflow-x-hidden">
       <div className="absolute inset-0 bg-[#05070b]" />
       <div className="absolute inset-0">
+        {/* Reactbitsistä otettu beams komponentti taustaksi */}
         <Beams
           beamWidth={2}
           beamHeight={20}
@@ -56,7 +58,9 @@ function Front() {
           rotation={40}
         />
       </div>
+      {/* tummennus beamsien päälle */}
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,23,0.34),rgba(2,6,23,0.52),rgba(2,6,23,0.86))]" />
+      {/* front.jsx ja second.jsx vaihto smoothimpi */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-44 bg-[linear-gradient(180deg,rgba(5,7,11,0),#050505)] md:h-56" />
 
       <div className="relative z-20 mx-auto max-w-6xl px-6 pt-32 pb-28 md:px-8 md:pt-40 md:pb-36">
@@ -77,9 +81,11 @@ function Front() {
                   className="h-8 w-8 object-contain"
                 />
               </div>
+              {/* iso Niilo Räisänen teksti */}
               <h1 className="mt-5 text-5xl font-semibold leading-none tracking-tight text-white md:text-7xl lg:text-[5.5rem] lg:whitespace-nowrap">
                 Niilo Räisänen
               </h1>
+              {/* sosiaali linkit */}
               <div className="mt-6 flex flex-wrap gap-4">
                 <a
                   href="https://github.com/Raiskale"
@@ -123,6 +129,7 @@ function Front() {
           initialOpacity={0}
         >
           <section className="mt-10 border-y border-white/8 py-6">
+          {/* reactbitsistä löyetty logoloop komponentti */}
             <LogoLoop
               logos={teknologiat}
               speed={40}
@@ -146,7 +153,7 @@ function Front() {
             />
           </section>
         </FadeContent>
-
+{/* pikku tietoteksti musta */}
         <section className="mt-12 grid gap-10 lg:grid-cols-2">
           <FadeContent
             blur={true}
@@ -160,7 +167,7 @@ function Front() {
               <p className="mt-4 max-w-lg text-xl leading-9 text-white/78 md:text-2xl md:leading-[1.3]">
                 Tuleva web-kehittäjä kotoisin Oulusta. Olen 2008 syntynyt poika ja käyn vapaa-ajallani kuntosalilla ja teen omia projekteja. Tykkään tehdä hyvännäköisiä verkkosivuja, jotka ovat käyttäjäystävällisiä ja moderneja.
               </p>
-
+              {/* linkki pdf tiedostoon jossa voi lukea lisää musta */}
               <a
                 href={pdfLinkki}
                 target="_blank"
@@ -168,6 +175,7 @@ function Front() {
                 className="mt-8 inline-flex h-12 items-center gap-2 text-xs  underline  text-white transition hover:text-blue-400"
               >
                 <FiFileText className="h-6 w-6" />
+                {/* itse nappi */}
                 <span className="text-base font-medium">Lue lisää minusta</span>
               </a>
             </div>
@@ -180,6 +188,8 @@ function Front() {
             easing="ease-out"
             initialOpacity={0}
           >
+
+            {/* sivun oikea alareuna laatikko jossa nykytilanteesta*/}
             <div className="flex items-end">
               <div className="rounded-3xl border border-white/10 bg-black/20 p-6 backdrop-blur-sm">
                 <p className="text-sm uppercase tracking-[0.24em] text-blue-100/70">

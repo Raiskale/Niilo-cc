@@ -8,6 +8,7 @@ import GlareHover from './GlareHover'
 import ShinyText from './ShinyText'
 
 function Second() {
+  // lista projekteista jotka sit mapataan sivulle kun niitä lisätään
   const projektit = [
     {
       name: 'Sivupalvelut.fi',
@@ -20,7 +21,7 @@ function Second() {
     {
       name: 'OP-Pankki lomake',
       type: 'HTML / CSS / JS',
-      text: 'Koulussa tehty projekti, jossa tein replikan oikeasta lomakkeesta. (Tiedot eivät ole aitoja sivulla)',
+      text: 'Koulussa tehty projekti, jossa tein lomakkeen oikean lomakkeen kuvan perusteella. (Tiedot eivät ole aitoja sivulla)',
       url: 'https://oup-theta.vercel.app/',
       image: oupKuva,
       alt: 'OUP-projektin etusivu',
@@ -38,10 +39,12 @@ function Second() {
   ]
 
   return (
+    
     <section
       id="projects"
       className="relative overflow-hidden bg-[#050505] px-6 pb-36 pt-24 text-white md:px-8 md:pb-44 md:pt-28 xl:pt-44"
     >
+      
       <div className="relative z-20 mx-auto max-w-6xl">
         <FadeContent
           blur={true}
@@ -54,6 +57,7 @@ function Second() {
               Projektit
             </p>
             <h2 className="mt-4 inline-flex items-center justify-center  text-4xl font-semibold tracking-tight text-white md:text-5xl">
+              {/* shinytext animaatio reactbits.dev sivulta ladattu projektiin  */}
               <ShinyText
                 text="Mun projektit"
                 speed={2}
@@ -67,6 +71,7 @@ function Second() {
                 disabled={false}
               />
               <img
+              // tietokone memoji
                 src={otsikkoKuva}
                 alt=""
                 aria-hidden="true"
@@ -86,6 +91,7 @@ function Second() {
           easing="ease-out"
           initialOpacity={0}
         >
+          {/* mapataan projekti listasta projekteja */}
           <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {projektit.map((projekti, index) => (
               <GlareHover
@@ -103,6 +109,7 @@ function Second() {
                 playOnce={false}
                 className="block"
               >
+                {/* projektikortti */}
                 <article
                   data-cursor-big="true"
                   className="relative z-0 h-full w-full rounded-2xl bg-[#0b0f17] p-5"
@@ -142,6 +149,7 @@ function Second() {
                     >
                       Avaa projekti
                     </a>
+                    {/* githubbi linkki näkyy vaa jos sille projektille on laitettu github arvo tauluun */}
                     {projekti.github && (
                       <a
                         href={projekti.github}

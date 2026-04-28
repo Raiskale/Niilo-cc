@@ -1,0 +1,21 @@
+{
+  "name": "Niilo Räisänen",
+  "short_name": "Niilo",
+  "description": "Niilo Räisänen ©2026 portfolio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#05070b",
+  "theme_color": "#05070b",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/og-image.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

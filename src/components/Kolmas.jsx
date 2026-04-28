@@ -1,6 +1,6 @@
 import FadeContent from './FadeContent'
 import ShinyText from './ShinyText'
-
+// aikajanalle tiedot
 const aikalista = [
   {
     title: 'Ritaharjun koulu',
@@ -42,11 +42,13 @@ function Kolmas() {
           easing="ease-out"
           initialOpacity={0}
         >
+          {/* otsikoita */}
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm uppercase tracking-[0.2em] text-blue-300/60">
               Tietoa minusta
             </p>
             <h2 className="mt-4 text-4xl font-semibold text-white md:text-5xl">
+              {/* reactbitsistä otettu shinytext  */}
               <ShinyText
                 text="Mun matka tähän asti"
                 speed={2}
@@ -60,6 +62,7 @@ function Kolmas() {
                 disabled={false}
               />
             </h2>
+            {/* lyhyt lisä */}
             <p className="mt-5 text-lg leading-8 text-white/70">
               Olen Oulusta ja opiskelen tieto- ja viestintätekniikkaa OSAO:ssa.
               Tykkään erityisesti frontendista, verkkosivujen tekemisestä ja
@@ -70,7 +73,7 @@ function Kolmas() {
 
         <div className="relative mt-18 md:mt-20">
           <div className="absolute bottom-0 left-4 top-0 w-[2px] bg-[linear-gradient(to_bottom,transparent,rgba(29,78,216,1)_10%,rgba(29,78,216,1)_90%,transparent)] md:left-1/2 md:-translate-x-1/2" />
-
+        {/* mapataan taulukosta aikajanalle */}
           <div className="space-y-12 md:space-y-16">
             {aikalista.map((kohta, index) => {
               const vasemmalla = index % 2 === 0
@@ -90,6 +93,7 @@ function Kolmas() {
                         vasemmalla ? 'md:pr-14' : 'md:col-start-2 md:pl-14'
                       }`}
                     >
+                      {/* kortti */}
                       <article className="ml-10 rounded-lg border border-blue-700/35 bg-[#0b1220] px-5 py-5 md:ml-0 md:min-h-[9.5rem] md:max-w-[27rem]">
                         <h3 className="text-xl font-semibold text-white">
                           {kohta.title}
@@ -102,9 +106,9 @@ function Kolmas() {
                         </p>
                       </article>
                     </div>
-
+                      
                     <div className="hidden md:block" />
-
+                      {/* sininen piste */}
                     <div className="absolute left-4 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-700 md:left-1/2" />
                   </div>
                 </FadeContent>
