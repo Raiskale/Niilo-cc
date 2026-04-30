@@ -90,8 +90,8 @@ function Front() {
                 <a
                   href="https://github.com/Raiskale"
                   target="_blank"
-                  rel="noreferrer"
-                  aria-label="GitHub"
+                  rel="me noreferrer"
+                  aria-label="Niilo Räisänen GitHub"
                   className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
                 >
                   <FaGithub className="h-6 w-6" />
@@ -100,8 +100,8 @@ function Front() {
                 <a
                   href="https://www.linkedin.com/in/niilo-r%C3%A4is%C3%A4nen-4325702b5/"
                   target="_blank"
-                  rel="noreferrer"
-                  aria-label="LinkedIn"
+                  rel="me noreferrer"
+                  aria-label="Niilo Räisänen LinkedIn"
                   className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
                 >
                   <FaLinkedin className="h-6 w-6" />

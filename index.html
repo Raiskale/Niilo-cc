@@ -7,7 +7,7 @@
     <!-- SEO asioita hirmusesti -->
     <meta
       name="description"
-      content="Niilo Räisänen on oululainen tuleva ohjelmistokehittäjä, joka tekee moderneja, käyttäjäystävällisiä verkkosivuja ja frontend-projekteja."
+      content="Niilo Räisäsen virallinen portfolio. Niilo on oululainen tuleva ohjelmistokehittäjä, joka tekee moderneja, käyttäjäystävällisiä verkkosivuja ja frontend-projekteja."
     />
     <meta
       name="keywords"
@@ -15,7 +15,12 @@
     />
     <meta name="author" content="Niilo Räisänen" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://niilo.cc/" />
+    <link rel="canonical" href="https://www.niilo.cc/" />
+    <link rel="me" href="https://github.com/Raiskale" />
+    <link
+      rel="me"
+      href="https://www.linkedin.com/in/niilo-r%C3%A4is%C3%A4nen-4325702b5/"
+    />
 
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fi_FI" />
@@ -28,8 +33,8 @@
       property="og:description"
       content="Portfolio, projektit ja yhteystiedot. Niilo tekee moderneja verkkosivuja Reactilla ja muilla web-teknologioilla."
     />
-    <meta property="og:url" content="https://niilo.cc/" />
-    <meta property="og:image" content="https://niilo.cc/og-image.png" />
+    <meta property="og:url" content="https://www.niilo.cc/" />
+    <meta property="og:image" content="https://www.niilo.cc/og-image.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="512" />
     <meta property="og:image:height" content="512" />
@@ -44,7 +49,7 @@
       name="twitter:description"
       content="Portfolio, projektit ja yhteystiedot. Moderneja, käyttäjäystävällisiä verkkosivuja."
     />
-    <meta name="twitter:image" content="https://niilo.cc/og-image.png" />
+    <meta name="twitter:image" content="https://www.niilo.cc/og-image.png" />
     <meta name="twitter:image:alt" content="Niilo Räisäsen portfolio memoji" />
 
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
@@ -54,34 +59,85 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Niilo Räisänen",
-        "url": "https://niilo.cc/",
-        "email": "mailto:niilo.raisanen@gmail.com",
-        "jobTitle": "Tuleva ohjelmistokehittäjä",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Oulu",
-          "addressCountry": "FI"
-        },
-        "sameAs": [
-          "https://github.com/Raiskale",
-          "https://www.linkedin.com/in/niilo-r%C3%A4is%C3%A4nen-4325702b5/"
-        ],
-        "knowsAbout": [
-          "React",
-          "JavaScript",
-          "Frontend-kehitys",
-          "Käyttöliittymäsuunnittelu",
-          "Verkkosivut"
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://www.niilo.cc/#person",
+            "name": "Niilo Räisänen",
+            "givenName": "Niilo",
+            "familyName": "Räisänen",
+            "url": "https://www.niilo.cc/",
+            "mainEntityOfPage": "https://www.niilo.cc/",
+            "image": "https://www.niilo.cc/og-image.png",
+            "email": "mailto:niilo.raisanen@gmail.com",
+            "jobTitle": "Tuleva ohjelmistokehittäjä",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Oulu",
+              "addressCountry": "FI"
+            },
+            "sameAs": [
+              "https://github.com/Raiskale",
+              "https://www.linkedin.com/in/niilo-r%C3%A4is%C3%A4nen-4325702b5/"
+            ],
+            "knowsAbout": [
+              "React",
+              "JavaScript",
+              "Frontend-kehitys",
+              "Käyttöliittymäsuunnittelu",
+              "Verkkosivut"
+            ]
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://www.niilo.cc/#profile-page",
+            "url": "https://www.niilo.cc/",
+            "name": "Niilo Räisänen",
+            "description": "Niilo Räisäsen virallinen portfolio ja profiilisivu.",
+            "inLanguage": "fi-FI",
+            "mainEntity": {
+              "@id": "https://www.niilo.cc/#person"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.niilo.cc/#website",
+            "url": "https://www.niilo.cc/",
+            "name": "Niilo Räisänen",
+            "inLanguage": "fi-FI",
+            "publisher": {
+              "@id": "https://www.niilo.cc/#person"
+            }
+          }
         ]
       }
     </script>
 
-    <title>Niilo Räisänen - Tuleva ohjelmistokehittäjä</title>
+    <title>Niilo Räisänen | Portfolio ja ohjelmistokehittäjä Oulu</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <main>
+        <h1>Niilo Räisänen portfolio</h1>
+        <p>
+          Niilo Räisänen on oululainen tuleva ohjelmistokehittäjä, joka tekee
+          moderneja, käyttäjäystävällisiä verkkosivuja ja frontend-projekteja.
+        </p>
+        <p>
+          Virallinen portfolio ja yhteystiedot löytyvät osoitteesta
+          https://www.niilo.cc/.
+        </p>
+        <nav aria-label="Niilo Räisänen profiilit">
+          <a rel="me" href="https://github.com/Raiskale">GitHub</a>
+          <a
+            rel="me"
+            href="https://www.linkedin.com/in/niilo-r%C3%A4is%C3%A4nen-4325702b5/"
+          >
+            LinkedIn
+          </a>
+        </nav>
+      </main>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
